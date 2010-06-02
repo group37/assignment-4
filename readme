@@ -1,18 +1,10 @@
 TODO:
 - implement tabs
 	- SCHEDULE
+		maybe we should have different panes for each division, and switch the panes when the division is chosen
+		otherwise, 
 	- TEAMS
 	- SCORES
 	- RANKINGS
-<<<<<<< HEAD
 	- CHECKLIST
-=======
 
-=======
-from git gui [type git gui from start button in windows]:
-add repository [choose where you want to store the files]
-
-from git bash:
-$ cd [where you chose to store the files before]
-$ git remote add origin git@github.com:group37/assignment-4.git
->>>>>>> origin/master
