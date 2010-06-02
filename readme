@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-A test
-
 TODO:
 - implement tabs
 	- SCHEDULE
@@ -16,6 +12,3 @@ add repository [choose where you want to store the files]
 from git bash:
 $ cd [where you chose to store the files before]
 $ git remote add origin git@github.com:group37/assignment-4.git
-
-
->>>>>>> origin/master
