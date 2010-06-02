@@ -27,10 +27,4 @@ public class Database {
 //		teamSenior[10] = new Team("10", "Team 10", Team.Division.SENIOR, "Y", "x@email.com", "123 4567", "765 4321");
 	}
 }
-/*
- * 
 
-
-
- * 
- * */
