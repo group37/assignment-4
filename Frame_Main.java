@@ -9,6 +9,8 @@ import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
+import javax.swing.JSplitPane;
+import javax.swing.JEditorPane;
 
 public class Frame_Main extends JFrame {
 
@@ -51,6 +53,24 @@ public class Frame_Main extends JFrame {
 	private JLabel Label_Scores_Vs = null;
 	private JComboBox ComboBox_Scores_TeamB = null;
 	private JLabel Label_Scores_Scores = null;
+	private JComboBox ComboBox_Rankings_Division = null;
+	private JLabel Label_Rankings_Division = null;
+	private JLabel Label_Rankings_Team = null;
+	private JLabel Label_Rankings_Rank = null;
+	private JLabel Label_Rankings_PointsFor = null;
+	private JLabel Label_Rankings_PointsAgainst = null;
+	private JButton Button_Organise = null;
+	private JButton Button_Save = null;
+	private JButton Button_Cancel = null;
+	private JComboBox ComboBox_Schedules_Week = null;
+	private JLabel Label_Schedule_WeekChoice = null;
+	private JLabel Label_Schedule_Division = null;
+	private JComboBox ComboBox_Schedules_Division = null;
+	private JButton Button_PrintRules = null;
+	private JButton Button_PrintChecklist = null;
+	private JSplitPane jSplitPane_Checklists = null;
+	private JEditorPane jEditorPane_Rules = null;
+	private JEditorPane jEditorPane_Checklist = null;
 	/**
 	 * This method initializes TabbedPane	
 	 * 	
@@ -75,41 +95,77 @@ public class Frame_Main extends JFrame {
 	 */
 	private JPanel getPanel_Schedule() {
 		if (Panel_Schedule == null) {
+			GridBagConstraints gridBagConstraints181 = new GridBagConstraints();
+			gridBagConstraints181.fill = GridBagConstraints.VERTICAL;
+			gridBagConstraints181.gridy = 1;
+			gridBagConstraints181.weightx = 1.0;
+			gridBagConstraints181.gridx = 1;
+			GridBagConstraints gridBagConstraints171 = new GridBagConstraints();
+			gridBagConstraints171.gridx = 0;
+			gridBagConstraints171.gridy = 1;
+			Label_Schedule_Division = new JLabel();
+			Label_Schedule_Division.setText("Division:");
+			GridBagConstraints gridBagConstraints161 = new GridBagConstraints();
+			gridBagConstraints161.gridx = 0;
+			gridBagConstraints161.gridy = 0;
+			Label_Schedule_WeekChoice = new JLabel();
+			Label_Schedule_WeekChoice.setText("Week:");
+			GridBagConstraints gridBagConstraints151 = new GridBagConstraints();
+			gridBagConstraints151.fill = GridBagConstraints.VERTICAL;
+			gridBagConstraints151.gridy = 0;
+			gridBagConstraints151.weightx = 1.0;
+			gridBagConstraints151.gridx = 1;
+			GridBagConstraints gridBagConstraints37 = new GridBagConstraints();
+			gridBagConstraints37.gridx = 8;
+			gridBagConstraints37.gridy = 0;
+			GridBagConstraints gridBagConstraints210 = new GridBagConstraints();
+			gridBagConstraints210.gridx = 7;
+			gridBagConstraints210.gridy = 0;
+			GridBagConstraints gridBagConstraints110 = new GridBagConstraints();
+			gridBagConstraints110.gridx = 6;
+			gridBagConstraints110.gridy = 0;
 			GridBagConstraints gridBagConstraints11 = new GridBagConstraints();
 			gridBagConstraints11.gridx = 4;
-			gridBagConstraints11.gridy = 1;
+			gridBagConstraints11.gridy = 3;
 			Label_Schedule_Teams = new JLabel();
 			Label_Schedule_Teams.setText("Team Matchup");
 			GridBagConstraints gridBagConstraints3 = new GridBagConstraints();
 			gridBagConstraints3.gridx = 3;
-			gridBagConstraints3.gridy = 1;
+			gridBagConstraints3.gridy = 3;
 			Label_Schedule_Venue = new JLabel();
 			Label_Schedule_Venue.setText("Venue");
 			GridBagConstraints gridBagConstraints2 = new GridBagConstraints();
 			gridBagConstraints2.gridx = 2;
-			gridBagConstraints2.gridy = 1;
+			gridBagConstraints2.gridy = 3;
 			Label_Schedule_Time = new JLabel();
 			Label_Schedule_Time.setText("Time");
 			GridBagConstraints gridBagConstraints1 = new GridBagConstraints();
 			gridBagConstraints1.gridx = 1;
-			gridBagConstraints1.gridy = 1;
+			gridBagConstraints1.gridy = 3;
 			Label_Schedule_Week = new JLabel();
 			Label_Schedule_Week.setText("Week");
 			GridBagConstraints gridBagConstraints = new GridBagConstraints();
 			gridBagConstraints.gridx = 0;
 			gridBagConstraints.anchor = GridBagConstraints.NORTHWEST;
-			gridBagConstraints.gridy = 1;
+			gridBagConstraints.gridy = 3;
 			Label_Schedule_GameID = new JLabel();
 			Label_Schedule_GameID.setText("Game ID");
 			Panel_Schedule = new JPanel();
 			Panel_Schedule.setLayout(new GridBagLayout());
 			Panel_Schedule.setName("Schedule");
 			Panel_Schedule.add(Label_Schedule_GameID, gridBagConstraints);
-			
 			Panel_Schedule.add(Label_Schedule_Week, gridBagConstraints1);
 			Panel_Schedule.add(Label_Schedule_Time, gridBagConstraints2);
 			Panel_Schedule.add(Label_Schedule_Venue, gridBagConstraints3);
 			Panel_Schedule.add(Label_Schedule_Teams, gridBagConstraints11);
+			Panel_Schedule.add(getButton_Organise(), gridBagConstraints110);
+			Panel_Schedule.add(getButton_Save(), gridBagConstraints210);
+			Panel_Schedule.add(getButton_Cancel(), gridBagConstraints37);
+			Panel_Schedule.add(getComboBox_Schedules_Week(), gridBagConstraints151);
+			Panel_Schedule.add(Label_Schedule_WeekChoice, gridBagConstraints161);
+			Panel_Schedule.add(Label_Schedule_Division, gridBagConstraints171);
+			Panel_Schedule.add(getComboBox_Schedules_Division(), gridBagConstraints181);
+			
 		}
 		return Panel_Schedule;
 	}
@@ -122,16 +178,16 @@ public class Frame_Main extends JFrame {
 	private JPanel getPanel_Team() {
 		if (Panel_Team == null) {
 			GridBagConstraints gridBagConstraints23 = new GridBagConstraints();
-			gridBagConstraints23.gridx = 19;
+			gridBagConstraints23.gridx = 3;
 			gridBagConstraints23.gridy = 12;
 			GridBagConstraints gridBagConstraints22 = new GridBagConstraints();
-			gridBagConstraints22.gridx = 19;
+			gridBagConstraints22.gridx = 3;
 			gridBagConstraints22.gridy = 11;
 			GridBagConstraints gridBagConstraints21 = new GridBagConstraints();
-			gridBagConstraints21.gridx = 19;
+			gridBagConstraints21.gridx = 3;
 			gridBagConstraints21.gridy = 10;
 			GridBagConstraints gridBagConstraints20 = new GridBagConstraints();
-			gridBagConstraints20.gridx = 19;
+			gridBagConstraints20.gridx = 3;
 			gridBagConstraints20.gridy = 9;
 			GridBagConstraints gridBagConstraints19 = new GridBagConstraints();
 			gridBagConstraints19.gridx = 1;
@@ -154,10 +210,10 @@ public class Frame_Main extends JFrame {
 			Label_Team_Contact_Person = new JLabel();
 			Label_Team_Contact_Person.setText("Contact Person:");
 			GridBagConstraints gridBagConstraints15 = new GridBagConstraints();
-			gridBagConstraints15.gridx = 19;
+			gridBagConstraints15.gridx = 3;
 			gridBagConstraints15.gridy = 7;
 			GridBagConstraints gridBagConstraints14 = new GridBagConstraints();
-			gridBagConstraints14.gridx = 19;
+			gridBagConstraints14.gridx = 3;
 			gridBagConstraints14.gridy = 6;
 			GridBagConstraints gridBagConstraints13 = new GridBagConstraints();
 			gridBagConstraints13.gridx = 0;
@@ -196,10 +252,10 @@ public class Frame_Main extends JFrame {
 			Label_Team_TeamName.setText("Team Name");
 			GridBagConstraints gridBagConstraints5 = new GridBagConstraints();
 			gridBagConstraints5.gridy = 3;
-			gridBagConstraints5.gridx = 14;
+			gridBagConstraints5.gridx = 2;
 			GridBagConstraints gridBagConstraints4 = new GridBagConstraints();
 			gridBagConstraints4.gridy = 2;
-			gridBagConstraints4.gridx = 14;
+			gridBagConstraints4.gridx = 2;
 			Panel_Team = new JPanel();
 			Panel_Team.setLayout(new GridBagLayout());
 			Panel_Team.setName("Teams");
@@ -234,9 +290,45 @@ public class Frame_Main extends JFrame {
 	 */
 	private JPanel getPanel_Rankings() {
 		if (Panel_Rankings == null) {
+			GridBagConstraints gridBagConstraints36 = new GridBagConstraints();
+			gridBagConstraints36.gridx = 5;
+			gridBagConstraints36.gridy = 1;
+			Label_Rankings_PointsAgainst = new JLabel();
+			Label_Rankings_PointsAgainst.setText("Points Against:");
+			GridBagConstraints gridBagConstraints35 = new GridBagConstraints();
+			gridBagConstraints35.gridx = 2;
+			gridBagConstraints35.gridy = 1;
+			Label_Rankings_PointsFor = new JLabel();
+			Label_Rankings_PointsFor.setText("Points For:");
+			GridBagConstraints gridBagConstraints34 = new GridBagConstraints();
+			gridBagConstraints34.gridx = 0;
+			gridBagConstraints34.gridy = 1;
+			Label_Rankings_Rank = new JLabel();
+			Label_Rankings_Rank.setText("Rank:");
+			GridBagConstraints gridBagConstraints33 = new GridBagConstraints();
+			gridBagConstraints33.gridx = 1;
+			gridBagConstraints33.gridy = 1;
+			Label_Rankings_Team = new JLabel();
+			Label_Rankings_Team.setText("Team:");
+			GridBagConstraints gridBagConstraints32 = new GridBagConstraints();
+			gridBagConstraints32.gridx = 0;
+			gridBagConstraints32.gridy = 0;
+			Label_Rankings_Division = new JLabel();
+			Label_Rankings_Division.setText("Division:");
+			GridBagConstraints gridBagConstraints31 = new GridBagConstraints();
+			gridBagConstraints31.fill = GridBagConstraints.VERTICAL;
+			gridBagConstraints31.gridy = 0;
+			gridBagConstraints31.weightx = 1.0;
+			gridBagConstraints31.gridx = 1;
 			Panel_Rankings = new JPanel();
 			Panel_Rankings.setLayout(new GridBagLayout());
 			Panel_Rankings.setName("Rankings");
+			Panel_Rankings.add(getComboBox_Rankings_Division(), gridBagConstraints31);
+			Panel_Rankings.add(Label_Rankings_Division, gridBagConstraints32);
+			Panel_Rankings.add(Label_Rankings_Team, gridBagConstraints33);
+			Panel_Rankings.add(Label_Rankings_Rank, gridBagConstraints34);
+			Panel_Rankings.add(Label_Rankings_PointsFor, gridBagConstraints35);
+			Panel_Rankings.add(Label_Rankings_PointsAgainst, gridBagConstraints36);
 		}
 		return Panel_Rankings;
 	}
@@ -304,9 +396,25 @@ public class Frame_Main extends JFrame {
 	 */
 	private JPanel getPanel_Checklist() {
 		if (Panel_Checklist == null) {
+			GridBagConstraints gridBagConstraints40 = new GridBagConstraints();
+			gridBagConstraints40.fill = GridBagConstraints.BOTH;
+			gridBagConstraints40.gridy = 1;
+			gridBagConstraints40.weightx = 1.0;
+			gridBagConstraints40.weighty = 1.0;
+			gridBagConstraints40.gridwidth = 5;
+			gridBagConstraints40.gridx = 1;
+			GridBagConstraints gridBagConstraints39 = new GridBagConstraints();
+			gridBagConstraints39.gridx = 4;
+			gridBagConstraints39.gridy = 0;
+			GridBagConstraints gridBagConstraints38 = new GridBagConstraints();
+			gridBagConstraints38.gridx = 1;
+			gridBagConstraints38.gridy = 0;
 			Panel_Checklist = new JPanel();
 			Panel_Checklist.setLayout(new GridBagLayout());
 			Panel_Checklist.setName("Checklist");
+			Panel_Checklist.add(getButton_PrintRules(), gridBagConstraints38);
+			Panel_Checklist.add(getButton_PrintChecklist(), gridBagConstraints39);
+			Panel_Checklist.add(getJSplitPane_Checklists(), gridBagConstraints40);
 		}
 		return Panel_Checklist;
 	}
@@ -421,7 +529,7 @@ public class Frame_Main extends JFrame {
 	private JComboBox getComboBox_Scores_GameID() {
 		if (ComboBox_Scores_GameID == null) {
 			ComboBox_Scores_GameID = new JComboBox();
-			ComboBox_Scores_GameID.set
+			//ComboBox_Scores_GameID.set
 		}
 		return ComboBox_Scores_GameID;
 	}
@@ -448,6 +556,145 @@ public class Frame_Main extends JFrame {
 			ComboBox_Scores_TeamB = new JComboBox();
 		}
 		return ComboBox_Scores_TeamB;
+	}
+
+	/**
+	 * This method initializes ComboBox_Rankings_Division	
+	 * 	
+	 * @return javax.swing.JComboBox	
+	 */
+	private JComboBox getComboBox_Rankings_Division() {
+		if (ComboBox_Rankings_Division == null) {
+			ComboBox_Rankings_Division = new JComboBox();
+		}
+		return ComboBox_Rankings_Division;
+	}
+
+	/**
+	 * This method initializes Button_Organise	
+	 * 	
+	 * @return javax.swing.JButton	
+	 */
+	private JButton getButton_Organise() {
+		if (Button_Organise == null) {
+			Button_Organise = new JButton();
+			Button_Organise.setText("Orgainise Teams");
+		}
+		return Button_Organise;
+	}
+
+	/**
+	 * This method initializes Button_Save	
+	 * 	
+	 * @return javax.swing.JButton	
+	 */
+	private JButton getButton_Save() {
+		if (Button_Save == null) {
+			Button_Save = new JButton();
+			Button_Save.setText("Save");
+		}
+		return Button_Save;
+	}
+
+	/**
+	 * This method initializes Button_Cancel	
+	 * 	
+	 * @return javax.swing.JButton	
+	 */
+	private JButton getButton_Cancel() {
+		if (Button_Cancel == null) {
+			Button_Cancel = new JButton();
+			Button_Cancel.setText("Cancel");
+		}
+		return Button_Cancel;
+	}
+
+	/**
+	 * This method initializes ComboBox_Schedules_Week	
+	 * 	
+	 * @return javax.swing.JComboBox	
+	 */
+	private JComboBox getComboBox_Schedules_Week() {
+		if (ComboBox_Schedules_Week == null) {
+			ComboBox_Schedules_Week = new JComboBox();
+		}
+		return ComboBox_Schedules_Week;
+	}
+
+	/**
+	 * This method initializes ComboBox_Schedules_Division	
+	 * 	
+	 * @return javax.swing.JComboBox	
+	 */
+	private JComboBox getComboBox_Schedules_Division() {
+		if (ComboBox_Schedules_Division == null) {
+			ComboBox_Schedules_Division = new JComboBox();
+		}
+		return ComboBox_Schedules_Division;
+	}
+
+	/**
+	 * This method initializes Button_PrintRules	
+	 * 	
+	 * @return javax.swing.JButton	
+	 */
+	private JButton getButton_PrintRules() {
+		if (Button_PrintRules == null) {
+			Button_PrintRules = new JButton();
+			Button_PrintRules.setText("Print Rules");
+		}
+		return Button_PrintRules;
+	}
+
+	/**
+	 * This method initializes Button_PrintChecklist	
+	 * 	
+	 * @return javax.swing.JButton	
+	 */
+	private JButton getButton_PrintChecklist() {
+		if (Button_PrintChecklist == null) {
+			Button_PrintChecklist = new JButton();
+			Button_PrintChecklist.setText("Print Checklist");
+		}
+		return Button_PrintChecklist;
+	}
+
+	/**
+	 * This method initializes jSplitPane_Checklists	
+	 * 	
+	 * @return javax.swing.JSplitPane	
+	 */
+	private JSplitPane getJSplitPane_Checklists() {
+		if (jSplitPane_Checklists == null) {
+			jSplitPane_Checklists = new JSplitPane();
+			jSplitPane_Checklists.setLeftComponent(getJEditorPane_Rules());
+			jSplitPane_Checklists.setRightComponent(getJEditorPane_Checklist());
+		}
+		return jSplitPane_Checklists;
+	}
+
+	/**
+	 * This method initializes jEditorPane_Rules	
+	 * 	
+	 * @return javax.swing.JEditorPane	
+	 */
+	private JEditorPane getJEditorPane_Rules() {
+		if (jEditorPane_Rules == null) {
+			jEditorPane_Rules = new JEditorPane();
+		}
+		return jEditorPane_Rules;
+	}
+
+	/**
+	 * This method initializes jEditorPane_Checklist	
+	 * 	
+	 * @return javax.swing.JEditorPane	
+	 */
+	private JEditorPane getJEditorPane_Checklist() {
+		if (jEditorPane_Checklist == null) {
+			jEditorPane_Checklist = new JEditorPane();
+		}
+		return jEditorPane_Checklist;
 	}
 
 	/**
