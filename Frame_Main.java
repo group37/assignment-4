@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 import javax.swing.JComboBox;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JSplitPane;
 import javax.swing.JEditorPane;
 import javax.swing.JTextArea;
@@ -603,6 +604,16 @@ public class Frame_Main extends JFrame {
 		if (Button_Team_Edit_Name == null) {
 			Button_Team_Edit_Name = new JButton();
 			Button_Team_Edit_Name.setText("Edit");
+			Button_Team_Edit_Name.addActionListener(new ActionListener(){
+            	public void actionPerformed(ActionEvent e) {
+            		
+            		String str = JOptionPane.showInputDialog(null, "Enter desired team name: ", 
+            				"Edit Team Name", 1);
+            		// use str to edit array values here
+            		
+            	}
+            });
+			
 		}
 		return Button_Team_Edit_Name;
 	}
