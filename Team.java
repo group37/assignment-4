@@ -1,4 +1,5 @@
 public class Team {
+
 	public enum Division { JUNIOR, ADULT_BEGINNER, ADULT_INTERMEDIATE, ADULT_ADVANCED, SENIOR }
 	public String teamID;
 	public String teamName;
