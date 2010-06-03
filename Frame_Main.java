@@ -611,8 +611,7 @@ public class Frame_Main extends JFrame {
             				"Edit Team Name", 1);
             		// use str to edit array values here
             		TextArea_Teams_TeamName.setText(str);
-            		
-            		
+            		            		
             	}
             });
 			
@@ -629,6 +628,16 @@ public class Frame_Main extends JFrame {
 		if (Button_Team_Edit_Division == null) {
 			Button_Team_Edit_Division = new JButton();
 			Button_Team_Edit_Division.setText("Edit");
+			Button_Team_Edit_Division.addActionListener(new ActionListener(){
+            	public void actionPerformed(ActionEvent e) {
+            		
+            		String str = JOptionPane.showInputDialog(null, "Enter desired team division: ", 
+            				"Edit Team Division", 1);
+            		// use str to edit array values here
+            		TextArea_Teams_Division.setText(str);
+            		            		
+            	}
+            });
 		}
 		return Button_Team_Edit_Division;
 	}
@@ -642,6 +651,16 @@ public class Frame_Main extends JFrame {
 		if (Button_Team_Edit_Person == null) {
 			Button_Team_Edit_Person = new JButton();
 			Button_Team_Edit_Person.setText("Edit");
+			Button_Team_Edit_Person.addActionListener(new ActionListener(){
+            	public void actionPerformed(ActionEvent e) {
+            		
+            		String str = JOptionPane.showInputDialog(null, "Enter desired team contact person: ", 
+            				"Edit Team Contact Person", 1);
+            		// use str to edit array values here
+            		TextArea_Teams_ContactPerson.setText(str);
+            		         		
+            	}
+            });
 		}
 		return Button_Team_Edit_Person;
 	}
@@ -655,6 +674,16 @@ public class Frame_Main extends JFrame {
 		if (Button_Team_Edit_Email == null) {
 			Button_Team_Edit_Email = new JButton();
 			Button_Team_Edit_Email.setText("Edit");
+			Button_Team_Edit_Email.addActionListener(new ActionListener(){
+            	public void actionPerformed(ActionEvent e) {
+            		
+            		String str = JOptionPane.showInputDialog(null, "Enter desired team email: ", 
+            				"Edit Team Email", 1);
+            		// use str to edit array values here
+            		TextArea_Teams_Email.setText(str);
+            		            		
+            	}
+            });
 		}
 		return Button_Team_Edit_Email;
 	}
@@ -668,6 +697,17 @@ public class Frame_Main extends JFrame {
 		if (Button_Team_Edit_HomeNumber == null) {
 			Button_Team_Edit_HomeNumber = new JButton();
 			Button_Team_Edit_HomeNumber.setText("Edit");
+			Button_Team_Edit_HomeNumber.addActionListener(new ActionListener(){
+            	public void actionPerformed(ActionEvent e) {
+            		
+            		String str = JOptionPane.showInputDialog(null, "Enter desired team home contact number: ", 
+            				"Edit Team Home Number", 1);
+            		// use str to edit array values here
+            		TextArea_Teams_HomeNumber.setText(str);
+            		
+            		
+            	}
+            });
 		}
 		return Button_Team_Edit_HomeNumber;
 	}
@@ -681,6 +721,17 @@ public class Frame_Main extends JFrame {
 		if (Button_Team_Edit_MobileNumber == null) {
 			Button_Team_Edit_MobileNumber = new JButton();
 			Button_Team_Edit_MobileNumber.setText("Edit");
+			Button_Team_Edit_MobileNumber.addActionListener(new ActionListener(){
+            	public void actionPerformed(ActionEvent e) {
+            		
+            		String str = JOptionPane.showInputDialog(null, "Enter desired team mobile contact number: ", 
+            				"Edit Team Mobile Number", 1);
+            		// use str to edit array values here
+            		TextArea_Teams_MobileNumber.setText(str);
+            		
+            		
+            	}
+            });
 		}
 		return Button_Team_Edit_MobileNumber;
 	}
