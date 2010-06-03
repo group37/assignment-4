@@ -18,7 +18,15 @@ public class Database {
 		juniors.add(new Team("3", "Team 3", Team.Division.JUNIOR, "Chris", "chris@gmail.com", "123 4567", "765 4321"));
 		juniors.add(new Team("4", "Team 4", Team.Division.JUNIOR, "David", "david@gmail.com", "123 4567", "765 4321"));
 		juniors.add(new Team("5", "Team 5", Team.Division.JUNIOR, "Ed", "ed@hotmail.com", "123 4567", "765 4321"));
+<<<<<<< HEAD
 		juniors.add(new Team("6", "Team 6", Team.Division.JUNIOR, "F", "f@email.com", "123 4567", "765 4321"));
+=======
+<<<<<<< HEAD
+		juniors.add(new Team("6", "Team 6", Team.Division.JUNIOR, "F", "f@email.com", "123 4567", "765 4321"));
+=======
+		juniors.add(new Team("6", "Team 6", Team.Division.JUNIOR, "Fred", "fred@email.com", "123 4567", "765 4321"));
+>>>>>>> origin/master
+>>>>>>> origin/master
 		//seniors.addAll(c);
 			
 //		teamSenior[7] = new Team("7", "Team 7", Team.Division.ADULT_ADVANCED, "Dr X", "x@email.com", "123 4567", "765 4321");
