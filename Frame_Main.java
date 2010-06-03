@@ -610,6 +610,8 @@ public class Frame_Main extends JFrame {
             		String str = JOptionPane.showInputDialog(null, "Enter desired team name: ", 
             				"Edit Team Name", 1);
             		// use str to edit array values here
+            		TextArea_Teams_TeamName.setText(str);
+            		
             		
             	}
             });
