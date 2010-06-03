@@ -106,6 +106,10 @@ public class Frame_Main extends JFrame {
 	private JTextArea TextArea_Teams_TeamID = null;
 	private JButton Button_Teams_RemoveTeam = null;
 	private JTextArea TextArea_Teams_ContactPerson = null;
+
+	private JButton jButton_Scores_Edit = null;
+
+	private JButton jButton_Scores_Save = null;
 	
 	/**
 	 * This method initializes TabbedPane	
@@ -442,6 +446,12 @@ public class Frame_Main extends JFrame {
 	 */
 	private JPanel getPanel_Scores() {
 		if (Panel_Scores == null) {
+			GridBagConstraints gridBagConstraints51 = new GridBagConstraints();
+			gridBagConstraints51.gridx = 4;
+			gridBagConstraints51.gridy = 3;
+			GridBagConstraints gridBagConstraints50 = new GridBagConstraints();
+			gridBagConstraints50.gridx = 5;
+			gridBagConstraints50.gridy = 3;
 			GridBagConstraints gridBagConstraints30 = new GridBagConstraints();
 			gridBagConstraints30.gridx = 0;
 			gridBagConstraints30.gridy = 2;
@@ -488,6 +498,8 @@ public class Frame_Main extends JFrame {
 			Panel_Scores.add(Label_Scores_Vs, gridBagConstraints28);
 			Panel_Scores.add(getComboBox_Scores_TeamB(), gridBagConstraints29);
 			Panel_Scores.add(Label_Scores_Scores, gridBagConstraints30);
+			Panel_Scores.add(getJButton_Scores_Edit(), gridBagConstraints50);
+			Panel_Scores.add(getJButton_Scores_Save(), gridBagConstraints51);
 		}
 		return Panel_Scores;
 	}
@@ -591,6 +603,7 @@ public class Frame_Main extends JFrame {
 				TextArea_Teams_MobileNumber.setText(teamInfo[6]);
 				//score
 				
+				//TextArea_Teams_TeamName.repaint();
 				
 				
 			}
@@ -1048,6 +1061,32 @@ public class Frame_Main extends JFrame {
 			TextArea_Teams_ContactPerson = new JTextArea();
 		}
 		return TextArea_Teams_ContactPerson;
+	}
+
+	/**
+	 * This method initializes jButton_Scores_Edit	
+	 * 	
+	 * @return javax.swing.JButton	
+	 */
+	private JButton getJButton_Scores_Edit() {
+		if (jButton_Scores_Edit == null) {
+			jButton_Scores_Edit = new JButton();
+			jButton_Scores_Edit.setText("Edit");
+		}
+		return jButton_Scores_Edit;
+	}
+
+	/**
+	 * This method initializes jButton_Scores_Save	
+	 * 	
+	 * @return javax.swing.JButton	
+	 */
+	private JButton getJButton_Scores_Save() {
+		if (jButton_Scores_Save == null) {
+			jButton_Scores_Save = new JButton();
+			jButton_Scores_Save.setText("Save");
+		}
+		return jButton_Scores_Save;
 	}
 
 	/**
