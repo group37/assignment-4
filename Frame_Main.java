@@ -1001,9 +1001,15 @@ public class Frame_Main extends JFrame {
 	 */
 	public Frame_Main() {
 		super();
+	
+		u16.add(new String[] {"B&W","U16","5","Jeff Daniels","jeffd77@hotmail.com","(09) 333 33 33","0211548962","Score"});
+		u16.add(new String[] {"StayFit","U16","6","Graeme Turner","GTurner14@msn.com","(09) 222 22 22","0271168524","Score"});
+		u16.add(new String[] {"NoLimit","U16","7","Kate Fu","KateF99@gmail.com","(09) 444 44 44","021045897","Score"});
+		
 		advanced.add(new String[] {"Ultimate Black","Advanced","2","Lisa Ellis","lisae745@hotmail.com","(09) 234 56 78","0212985630","Score"});
 		advanced.add(new String[] {"WeGotThis","Advanced","3","John Ford","JFord12@msn.com","(09) 123 45 56","0273098126","Score"});
-		
+		advanced.add(new String[] {"JustDoIt","Advanced","8","Steve Allan","steveallan45@yahoo.com","(09) 555 55 55","0211457896","Score"});
+		advanced.add(new String[] {" Auckland's Best","Advanced","10","David Ruth","D.ruth@htotmail.com","(09) 777 77 77","0218888888","Score"});
 		
 		beginner.add(new String[] {"InMotion", "Beginner", "14", "Jonah Lomu", "JLomu@hotmail.com", "(09) 537 53 53", "0214444444", "Score"});
 		beginner.add(new String[] {"Team Ben", " Beginner",  "15", "David Tua", "abc@hotmail.com", "(09) 987 65 54", "0211234567", "Score"});
@@ -1011,6 +1017,8 @@ public class Frame_Main extends JFrame {
 		beginner.add(new String[] {"Team Edward", "Beginner", "17",  "John Campbell", "kak@hotmail.com", "(09) 489 23 00",  "0211472583", "Score"});
 		beginner.add(new String[] {"Team Regardt", "Beginner", "18", "Sherlock Holmes", "whoAmI@hotmail.com", "(09) 000 00 00",  "0219638527", "Score"});
 		
+		senior.add(new String[] {"LosingIsNotOk","Senior", "12", "Mel Gibson", "M.G@hotmail.com", "(09) 999 99 99", "0212222222", "Score"});
+		senior.add(new String[] {"ActiveForLife", "Senior", "13", "Micheal Jackson", "mick@hotmail.com", "(09) 800 83 83", "0213333333", "Score"});
 		initialize();
 	}
 
