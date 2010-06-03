@@ -40,16 +40,7 @@ public class Frame_Main extends JFrame {
 			{"Ultimate Black","Advanced","2","Lisa Ellis","lisae745@hotmail.com","(09) 234 56 78","0212985630","Score"},
 			{"WeGotThis","Advanced","3","John Ford","JFord12@msn.com","(09) 123 45 56","0273098126","Score"},
 			};*/
-	
-/*	String[][][] teams = 
-	{ 
-			{//advanced teams
-			{"Ultimate Black","Advanced","2","Lisa Ellis","lisae745@hotmail.com","(09) 234 56 78","0212985630","Score"},
-			{"WeGotThis","Advanced","3","John Ford","JFord12@msn.com","(09) 123 45 56","0273098126","Score"},
-			}
-	};*/
-	
-	
+		
 	private static final long serialVersionUID = 1L;
 	private JPanel jContentPane = null;
 	private JTabbedPane TabbedPane = null;
