@@ -18,18 +18,22 @@ import javax.swing.JButton;
 import javax.swing.JSplitPane;
 import javax.swing.JEditorPane;
 import javax.swing.JTextArea;
-//fdsds
+
 public class Frame_Main extends JFrame {
 	
 	String[] DivisionStrings = { "U16", "Beginner", "Intermediate", "Advanced", "Senior" };
 	
 	//array of 2d arrays
-	//ArrayList<String[]> beginner;
+	ArrayList<String[]>u16 = new ArrayList<String[]>(5);
+	ArrayList<String[]>beginner = new ArrayList<String[]>(5);
+	ArrayList<String[]>intermediate = new ArrayList<String[]>(5);
+	ArrayList<String[]>advanced = new ArrayList<String[]>(5);
+	ArrayList<String[]>senior = new ArrayList<String[]>(5);
 	
-	String[][] advanced = { 
+/*	String[][] advanced = { 
 			{"Ultimate Black","Advanced","2","Lisa Ellis","lisae745@hotmail.com","(09) 234 56 78","0212985630","Score"},
 			{"WeGotThis","Advanced","3","John Ford","JFord12@msn.com","(09) 123 45 56","0273098126","Score"},
-			};
+			};*/
 	
 /*	String[][][] teams = 
 	{ 
@@ -561,7 +565,7 @@ public class Frame_Main extends JFrame {
 	 */
 	private JComboBox getComboBox_Team_TeamName() {
 		if (ComboBox_Team_TeamName == null) {
-			ComboBox_Team_TeamName = new JComboBox(advanced);
+			ComboBox_Team_TeamName = new JComboBox(beginner.toArray());
 		}
 		ComboBox_Team_TeamName.addItemListener(new ItemListener(){
 			public void itemStateChanged(ItemEvent e) {
@@ -982,14 +986,9 @@ public class Frame_Main extends JFrame {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
-		
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				Frame_Main thisClass = new Frame_Main();
-				
-				
 				
 				thisClass.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				thisClass.setVisible(true);
@@ -1005,11 +1004,17 @@ public class Frame_Main extends JFrame {
 		//beginner.add(new String[] {"Ultimate Black","Advanced","2","Lisa Ellis","lisae745@hotmail.com","(09) 234 56 78","0212985630","Score"});
 		//beginner.add(new String[] {"WeGotThis","Advanced","3","John Ford","JFord12@msn.com","(09) 123 45 56","0273098126","Score"});
 		
-//		beginner.add(new String[] {"InMotion", "Beginner", "14", "Jonah Lomu", "JLomu@hotmail.com", "(09) 537 53 53", "0214444444", "Score"});
-//		beginner.add(new String[] {"Team Ben", " Beginner",  "15", "David Tua", "abc@hotmail.com", "(09) 987 65 54", "0211234567", "Score"});
-//		beginner.add(new String[] {"Team Sop", "Beginner", "16", "Mike Tyson", "soppyboi@hotmail.com", "(09) 564 23 21", "0219876543", "Score"});
-//		beginner.add(new String[] {"Team Edward", "Beginner", "17",  "John Campbell", "kak@hotmail.com", "(09) 489 23 00",  "0211472583", "Score"});
-//		beginner.add(new String[] {"Team Regardt", "Beginner", "18", "Sherlock Holmes", "whoAmI@hotmail.com", "(09) 000 00 00",  "0219638527", "Score"});
+		//u16 = new ArrayList<String[]>(5);
+		beginner = new ArrayList<String[]>(5);
+		//intermediate = new ArrayList<String[]>(5);
+		//advanced = new ArrayList<String[]>(5);
+		//senior = new ArrayList<String[]>(5);
+		
+		beginner.add(new String[] {"InMotion", "Beginner", "14", "Jonah Lomu", "JLomu@hotmail.com", "(09) 537 53 53", "0214444444", "Score"});
+		beginner.add(new String[] {"Team Ben", " Beginner",  "15", "David Tua", "abc@hotmail.com", "(09) 987 65 54", "0211234567", "Score"});
+		beginner.add(new String[] {"Team Sop", "Beginner", "16", "Mike Tyson", "soppyboi@hotmail.com", "(09) 564 23 21", "0219876543", "Score"});
+		beginner.add(new String[] {"Team Edward", "Beginner", "17",  "John Campbell", "kak@hotmail.com", "(09) 489 23 00",  "0211472583", "Score"});
+		beginner.add(new String[] {"Team Regardt", "Beginner", "18", "Sherlock Holmes", "whoAmI@hotmail.com", "(09) 000 00 00",  "0219638527", "Score"});
 		
 		initialize();
 	}
