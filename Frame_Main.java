@@ -1036,9 +1036,9 @@ public class Frame_Main extends JFrame {
 			Button_Teams_RemoveTeam.setText("Remove Team");
 			Button_Teams_RemoveTeam.addActionListener(new ActionListener(){
             	public void actionPerformed(ActionEvent e) {
-            		
-            		JOptionPane.showMessageDialog(null, "Are you sure you want to remove team:", 
-            				"Edit Team Name", 1);
+            		String team = TextArea_Teams_TeamName.getText();
+            		JOptionPane.showMessageDialog(null, "Are you sure you want to remove team:" + team, 
+            				"Remove Team", 1);
             		// use str to edit array values here
             		
             		
