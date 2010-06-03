@@ -549,9 +549,9 @@ public class Frame_Main extends JFrame {
             		if(ComboBox_Schedules_Division.getSelectedIndex() != ComboBox_Team_Division.getSelectedIndex()){
             			ComboBox_Schedules_Division.setSelectedIndex(ComboBox_Team_Division.getSelectedIndex());
             			
-            			//now chage the array in team_name combobox
-            			//getComboBox_Team_TeamName
-            			
+            			//now change the array in team_name combobox
+            			ArrayList<String[]> teamList = divisions.get(ComboBox_Team_Division.getSelectedIndex());
+            			ComboBox_Team_TeamName = new JComboBox(teamList.toArray());
             			//Combobox_Team_TeamName = new 
             			//(String[]) divisions;
             			//ComboBox_Team_Division = new JComboBox(divisions);
@@ -1091,8 +1091,8 @@ public class Frame_Main extends JFrame {
 		
 		divisions.add(u16);
 		divisions.add(beginner);
-		divisions.add(advanced);
 		divisions.add(intermediate);
+		divisions.add(advanced);
 		divisions.add(senior);
 		
 		initialize();
