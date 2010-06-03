@@ -79,6 +79,7 @@ public class Frame_Main extends JFrame {
 	private JTextArea TextArea_Teams_Division = null;
 	private JTextArea TextArea_Teams_TeamName = null;
 	private JTextArea TextArea_Teams_TeamID = null;
+	private JButton Button_Teams_RemoveTeam = null;
 	/**
 	 * This method initializes TabbedPane	
 	 * 	
@@ -185,6 +186,9 @@ public class Frame_Main extends JFrame {
 	 */
 	private JPanel getPanel_Team() {
 		if (Panel_Team == null) {
+			GridBagConstraints gridBagConstraints48 = new GridBagConstraints();
+			gridBagConstraints48.gridx = 4;
+			gridBagConstraints48.gridy = 8;
 			GridBagConstraints gridBagConstraints47 = new GridBagConstraints();
 			gridBagConstraints47.fill = GridBagConstraints.BOTH;
 			gridBagConstraints47.gridy = 5;
@@ -205,60 +209,60 @@ public class Frame_Main extends JFrame {
 			gridBagConstraints45.gridx = 2;
 			GridBagConstraints gridBagConstraints44 = new GridBagConstraints();
 			gridBagConstraints44.fill = GridBagConstraints.BOTH;
-			gridBagConstraints44.gridy = 12;
+			gridBagConstraints44.gridy = 13;
 			gridBagConstraints44.weightx = 1.0;
 			gridBagConstraints44.weighty = 1.0;
 			gridBagConstraints44.gridx = 2;
 			GridBagConstraints gridBagConstraints43 = new GridBagConstraints();
 			gridBagConstraints43.fill = GridBagConstraints.BOTH;
-			gridBagConstraints43.gridy = 11;
+			gridBagConstraints43.gridy = 12;
 			gridBagConstraints43.weightx = 1.0;
 			gridBagConstraints43.weighty = 1.0;
 			gridBagConstraints43.gridx = 2;
 			GridBagConstraints gridBagConstraints42 = new GridBagConstraints();
 			gridBagConstraints42.fill = GridBagConstraints.BOTH;
-			gridBagConstraints42.gridy = 10;
+			gridBagConstraints42.gridy = 11;
 			gridBagConstraints42.weightx = 1.0;
 			gridBagConstraints42.weighty = 1.0;
 			gridBagConstraints42.gridx = 2;
 			GridBagConstraints gridBagConstraints41 = new GridBagConstraints();
 			gridBagConstraints41.fill = GridBagConstraints.VERTICAL;
-			gridBagConstraints41.gridy = 9;
+			gridBagConstraints41.gridy = 10;
 			gridBagConstraints41.weightx = 1.0;
 			gridBagConstraints41.gridx = 2;
 			GridBagConstraints gridBagConstraints23 = new GridBagConstraints();
 			gridBagConstraints23.gridx = 3;
-			gridBagConstraints23.gridy = 12;
+			gridBagConstraints23.gridy = 13;
 			GridBagConstraints gridBagConstraints22 = new GridBagConstraints();
 			gridBagConstraints22.gridx = 3;
-			gridBagConstraints22.gridy = 11;
+			gridBagConstraints22.gridy = 12;
 			GridBagConstraints gridBagConstraints21 = new GridBagConstraints();
 			gridBagConstraints21.gridx = 3;
-			gridBagConstraints21.gridy = 10;
+			gridBagConstraints21.gridy = 11;
 			GridBagConstraints gridBagConstraints20 = new GridBagConstraints();
 			gridBagConstraints20.gridx = 3;
-			gridBagConstraints20.gridy = 9;
+			gridBagConstraints20.gridy = 10;
 			GridBagConstraints gridBagConstraints19 = new GridBagConstraints();
 			gridBagConstraints19.gridx = 1;
-			gridBagConstraints19.gridy = 12;
+			gridBagConstraints19.gridy = 13;
 			
 			Label_Team_Contact_MobileNumber = new JLabel();
 			Label_Team_Contact_MobileNumber.setText("Mobile Number:");
 			GridBagConstraints gridBagConstraints18 = new GridBagConstraints();
 			gridBagConstraints18.gridx = 1;
-			gridBagConstraints18.gridy = 11;
+			gridBagConstraints18.gridy = 12;
 			
 			Label_Team_Contact_HomeNumber = new JLabel();
 			Label_Team_Contact_HomeNumber.setText("Home Number:");
 			GridBagConstraints gridBagConstraints17 = new GridBagConstraints();
 			gridBagConstraints17.gridx = 1;
-			gridBagConstraints17.gridy = 10;
+			gridBagConstraints17.gridy = 11;
 			
 			Label_Team_Contact_Email = new JLabel();
 			Label_Team_Contact_Email.setText("Email:");
 			GridBagConstraints gridBagConstraints16 = new GridBagConstraints();
 			gridBagConstraints16.gridx = 1;
-			gridBagConstraints16.gridy = 9;
+			gridBagConstraints16.gridy = 10;
 			
 			Label_Team_Contact_Person = new JLabel();
 			Label_Team_Contact_Person.setText("Contact Person:");
@@ -270,7 +274,7 @@ public class Frame_Main extends JFrame {
 			gridBagConstraints14.gridy = 6;
 			GridBagConstraints gridBagConstraints13 = new GridBagConstraints();
 			gridBagConstraints13.gridx = 0;
-			gridBagConstraints13.gridy = 8;
+			gridBagConstraints13.gridy = 9;
 			
 			Label_Team_Contact_Info = new JLabel();
 			Label_Team_Contact_Info.setText("Contact Information:");
@@ -347,6 +351,7 @@ public class Frame_Main extends JFrame {
 			Panel_Team.add(getTextArea_Teams_Division(), gridBagConstraints45);
 			Panel_Team.add(getTextArea_Teams_TeamName(), gridBagConstraints46);
 			Panel_Team.add(getTextArea_Teams_TeamID(), gridBagConstraints47);
+			Panel_Team.add(getButton_Teams_RemoveTeam(), gridBagConstraints48);
 			
 		}
 		return Panel_Team;
@@ -471,6 +476,7 @@ public class Frame_Main extends JFrame {
 			gridBagConstraints40.weightx = 1.0;
 			gridBagConstraints40.weighty = 1.0;
 			gridBagConstraints40.gridwidth = 5;
+			gridBagConstraints40.anchor = GridBagConstraints.CENTER;
 			gridBagConstraints40.gridx = 1;
 			GridBagConstraints gridBagConstraints39 = new GridBagConstraints();
 			gridBagConstraints39.gridx = 4;
@@ -753,6 +759,17 @@ public class Frame_Main extends JFrame {
 	private JEditorPane getJEditorPane_Rules() {
 		if (jEditorPane_Rules == null) {
 			jEditorPane_Rules = new JEditorPane();
+			jEditorPane_Rules.setText("Ultimate in 10 simple rules"
+   +"\n1. The Field -- A rectangular shape with endzones at each end. A regulation field is 64m by 37m, with endzones 18m deep."
+   +"\n2. Initiate Play -- Each point begins with both teams lining up on the front of their respective endzone line. The defense throws (\"pulls\") the disc to the offense. A regulation game has seven players per team."
+   +"\n3. Scoring -- Each time the offense completes a pass in the defense's endzone, the offense scores a point. Play is initiated after each score."
+   +"\n4. Movement of the Disc -- The disc may be advanced in any direction by completing a pass to a teammate. Players may not run with the disc. The person with the disc (\"thrower\") has ten seconds to throw the disc. The defender guarding the thrower (\"marker\") counts out the stall count."
+   +"\n5. Change of possession -- When a pass in not completed (e.g. out of bounds, drop, block, interception), the defense immediately takes possession of the disc and becomes the offense."
+   +"\n6. Substitutions -- Players not in the game may replace players in the game after a score and during an injury timeout."
+   +"\n7. Non-contact -- No physical contact is allowed between players. Picks and screens are also prohibited. A foul occurs when contact is made."
+   +"\n8. Fouls -- When a player initiates contact on another player a foul occurs. When a foul disrupts possession, the play resumes as if the possession was retained. If the player committing the foul disagrees with the foul call, the play is redone."
+   +"\n9. Self-Refereeing -- Players are responsible for their own foul and line calls. Players resolve their own disputes."
+   +"\n10. Spirit of the Game -- Ultimate stresses sportsmanship and fair play. Competitive play is encouraged, but never at the expense of respect between players, adherence to the rules, and the basic joy of play.");
 		}
 		return jEditorPane_Rules;
 	}
@@ -765,6 +782,20 @@ public class Frame_Main extends JFrame {
 	private JEditorPane getJEditorPane_Checklist() {
 		if (jEditorPane_Checklist == null) {
 			jEditorPane_Checklist = new JEditorPane();
+			jEditorPane_Checklist.setText("To do: \nCheck venue location and game times"
+					+"\nContact both teams contact person"
+					+"\n? Organise referees for each game"
+					+"\nBring rules sheet"
+					+"\nBring score sheet"
+					+"\n\nRecord and enter final scores in the system"
+
+					+"\nEquipments:"
+					+"\nFrisbee"
+					+"\nCones"
+					+"\nWater"
+					+"\nWhistle"
+					+"\nDifferent colour singlets for each team"
+					+"\nFirst Aid Kit");
 		}
 		return jEditorPane_Checklist;
 	}
@@ -851,6 +882,19 @@ public class Frame_Main extends JFrame {
 			TextArea_Teams_TeamID = new JTextArea();
 		}
 		return TextArea_Teams_TeamID;
+	}
+
+	/**
+	 * This method initializes Button_Teams_RemoveTeam	
+	 * 	
+	 * @return javax.swing.JButton	
+	 */
+	private JButton getButton_Teams_RemoveTeam() {
+		if (Button_Teams_RemoveTeam == null) {
+			Button_Teams_RemoveTeam = new JButton();
+			Button_Teams_RemoveTeam.setText("Remove Team");
+		}
+		return Button_Teams_RemoveTeam;
 	}
 
 	/**
