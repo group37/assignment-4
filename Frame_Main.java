@@ -32,7 +32,7 @@ public class Frame_Main extends JFrame {
 	ArrayList<String[]>senior = new ArrayList<String[]>(5);
 	
 	//ArrayList<String[]>[] divisions = new ArrayList<String[]>[5];
-	ArrayList<ArrayList<String[]>> divisions;
+	ArrayList<ArrayList<String[]>> divisions = new ArrayList<ArrayList<String[]>>(5);
 	//divisions.add
 	//Object[] divisions = { u16,beginner,intermediate,advanced,senior };
 	
@@ -541,7 +541,7 @@ public class Frame_Main extends JFrame {
         if (ComboBox_Team_Division == null) {
             
             //ComboBox_Team_Division = new JComboBox(DivisionStrings);
-        	ComboBox_Team_Division = new JComboBox(beginner.toArray());
+        	ComboBox_Team_Division = new JComboBox(divisions.toArray());
         	
             ComboBox_Team_Division.addItemListener(new ItemListener(){
             	public void itemStateChanged(ItemEvent e) {
@@ -550,6 +550,8 @@ public class Frame_Main extends JFrame {
             			ComboBox_Schedules_Division.setSelectedIndex(ComboBox_Team_Division.getSelectedIndex());
             			
             			//now chage the array in team_name combobox
+            			//getComboBox_Team_TeamName
+            			
             			//Combobox_Team_TeamName = new 
             			//(String[]) divisions;
             			//ComboBox_Team_Division = new JComboBox(divisions);
@@ -574,9 +576,7 @@ public class Frame_Main extends JFrame {
 			ComboBox_Team_TeamName = new JComboBox(beginner.toArray());
 		}
 		ComboBox_Team_TeamName.addItemListener(new ItemListener(){
-			public void itemStateChanged(ItemEvent e) {
-				// save old value
-				
+			public void itemStateChanged(ItemEvent e) {		
 				//get relevant array
 				//int selectedIndex = ComboBox_Team_TeamName.getSelectedIndex();
 				String[] teamInfo = (String[]) ComboBox_Team_TeamName.getSelectedItem();
@@ -1037,6 +1037,12 @@ public class Frame_Main extends JFrame {
 		
 		senior.add(new String[] {"LosingIsNotOk","Senior", "12", "Mel Gibson", "M.G@hotmail.com", "(09) 999 99 99", "0212222222", "Score"});
 		senior.add(new String[] {"ActiveForLife", "Senior", "13", "Micheal Jackson", "mick@hotmail.com", "(09) 800 83 83", "0213333333", "Score"});
+		
+		divisions.add(u16);
+		divisions.add(beginner);
+		divisions.add(advanced);
+		divisions.add(intermediate);
+		divisions.add(senior);
 		
 		initialize();
 	}
