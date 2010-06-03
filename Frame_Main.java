@@ -1047,6 +1047,17 @@ public class Frame_Main extends JFrame {
 		if (Button_Teams_RemoveTeam == null) {
 			Button_Teams_RemoveTeam = new JButton();
 			Button_Teams_RemoveTeam.setText("Remove Team");
+			Button_Teams_RemoveTeam.addActionListener(new ActionListener(){
+            	public void actionPerformed(ActionEvent e) {
+            		String team = TextArea_Teams_TeamName.getText();
+            		JOptionPane.showMessageDialog(null, "Are you sure you want to remove team:" + team, 
+            				"Remove Team", 1);
+            		// use str to edit array values here
+            		
+            		
+            		
+            	}
+            });
 		}
 		return Button_Teams_RemoveTeam;
 	}
