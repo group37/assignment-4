@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 import javax.swing.JComboBox;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JSplitPane;
 import javax.swing.JEditorPane;
 import javax.swing.JTextArea;
@@ -546,13 +547,22 @@ public class Frame_Main extends JFrame {
 	private JComboBox getComboBox_Team_Division() {
         if (ComboBox_Team_Division == null) {
             
-            ComboBox_Team_Division = new JComboBox(DivisionStrings);
-            
+            //ComboBox_Team_Division = new JComboBox(DivisionStrings);
+        	ComboBox_Team_Division = new JComboBox(divisions);
+        	
             ComboBox_Team_Division.addItemListener(new ItemListener(){
             	public void itemStateChanged(ItemEvent e) {
             		//change item in other combobox
             		if(ComboBox_Schedules_Division.getSelectedIndex() != ComboBox_Team_Division.getSelectedIndex()){
             			ComboBox_Schedules_Division.setSelectedIndex(ComboBox_Team_Division.getSelectedIndex());
+            			
+            			//now chage the array in team_name combobox
+            			//Combobox_Team_TeamName = new 
+            			//(String[]) divisions;
+            			//ComboBox_Team_Division = new JComboBox(divisions);
+     
+
+
             		}
             		//change the array to the appropriate one e.g.advance, u16 etc
             	}
