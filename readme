@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 TODO:
 - implement tabs
@@ -7,3 +8,15 @@ TODO:
 	- SCORES
 	- RANKINGS
 	- CHECKLIST
+=======
+TODO:
+- implement tabs
+	- SCHEDULE
+		maybe we should have different panes for each division, and switch the panes when the division is chosen
+		otherwise, 
+	- TEAMS
+	- SCORES
+	- RANKINGS
+	- CHECKLIST
+
+>>>>>>> origin/master
