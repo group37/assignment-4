@@ -11,6 +11,7 @@ import javax.swing.JComboBox;
 import javax.swing.JButton;
 import javax.swing.JSplitPane;
 import javax.swing.JEditorPane;
+import javax.swing.JTextArea;
 
 public class Frame_Main extends JFrame {
 
@@ -71,6 +72,13 @@ public class Frame_Main extends JFrame {
 	private JSplitPane jSplitPane_Checklists = null;
 	private JEditorPane jEditorPane_Rules = null;
 	private JEditorPane jEditorPane_Checklist = null;
+	private JComboBox ComboBox_Teams_ContactPerson = null;
+	private JTextArea TextArea_Teams_Email = null;
+	private JTextArea TextArea_Teams_HomeNumber = null;
+	private JTextArea TextArea_Teams_MobileNumber = null;
+	private JTextArea TextArea_Teams_Division = null;
+	private JTextArea TextArea_Teams_TeamName = null;
+	private JTextArea TextArea_Teams_TeamID = null;
 	/**
 	 * This method initializes TabbedPane	
 	 * 	
@@ -177,6 +185,47 @@ public class Frame_Main extends JFrame {
 	 */
 	private JPanel getPanel_Team() {
 		if (Panel_Team == null) {
+			GridBagConstraints gridBagConstraints47 = new GridBagConstraints();
+			gridBagConstraints47.fill = GridBagConstraints.BOTH;
+			gridBagConstraints47.gridy = 5;
+			gridBagConstraints47.weightx = 1.0;
+			gridBagConstraints47.weighty = 1.0;
+			gridBagConstraints47.gridx = 2;
+			GridBagConstraints gridBagConstraints46 = new GridBagConstraints();
+			gridBagConstraints46.fill = GridBagConstraints.BOTH;
+			gridBagConstraints46.gridy = 6;
+			gridBagConstraints46.weightx = 1.0;
+			gridBagConstraints46.weighty = 1.0;
+			gridBagConstraints46.gridx = 2;
+			GridBagConstraints gridBagConstraints45 = new GridBagConstraints();
+			gridBagConstraints45.fill = GridBagConstraints.BOTH;
+			gridBagConstraints45.gridy = 7;
+			gridBagConstraints45.weightx = 1.0;
+			gridBagConstraints45.weighty = 1.0;
+			gridBagConstraints45.gridx = 2;
+			GridBagConstraints gridBagConstraints44 = new GridBagConstraints();
+			gridBagConstraints44.fill = GridBagConstraints.BOTH;
+			gridBagConstraints44.gridy = 12;
+			gridBagConstraints44.weightx = 1.0;
+			gridBagConstraints44.weighty = 1.0;
+			gridBagConstraints44.gridx = 2;
+			GridBagConstraints gridBagConstraints43 = new GridBagConstraints();
+			gridBagConstraints43.fill = GridBagConstraints.BOTH;
+			gridBagConstraints43.gridy = 11;
+			gridBagConstraints43.weightx = 1.0;
+			gridBagConstraints43.weighty = 1.0;
+			gridBagConstraints43.gridx = 2;
+			GridBagConstraints gridBagConstraints42 = new GridBagConstraints();
+			gridBagConstraints42.fill = GridBagConstraints.BOTH;
+			gridBagConstraints42.gridy = 10;
+			gridBagConstraints42.weightx = 1.0;
+			gridBagConstraints42.weighty = 1.0;
+			gridBagConstraints42.gridx = 2;
+			GridBagConstraints gridBagConstraints41 = new GridBagConstraints();
+			gridBagConstraints41.fill = GridBagConstraints.VERTICAL;
+			gridBagConstraints41.gridy = 9;
+			gridBagConstraints41.weightx = 1.0;
+			gridBagConstraints41.gridx = 2;
 			GridBagConstraints gridBagConstraints23 = new GridBagConstraints();
 			gridBagConstraints23.gridx = 3;
 			gridBagConstraints23.gridy = 12;
@@ -192,21 +241,25 @@ public class Frame_Main extends JFrame {
 			GridBagConstraints gridBagConstraints19 = new GridBagConstraints();
 			gridBagConstraints19.gridx = 1;
 			gridBagConstraints19.gridy = 12;
+			
 			Label_Team_Contact_MobileNumber = new JLabel();
 			Label_Team_Contact_MobileNumber.setText("Mobile Number:");
 			GridBagConstraints gridBagConstraints18 = new GridBagConstraints();
 			gridBagConstraints18.gridx = 1;
 			gridBagConstraints18.gridy = 11;
+			
 			Label_Team_Contact_HomeNumber = new JLabel();
 			Label_Team_Contact_HomeNumber.setText("Home Number:");
 			GridBagConstraints gridBagConstraints17 = new GridBagConstraints();
 			gridBagConstraints17.gridx = 1;
 			gridBagConstraints17.gridy = 10;
+			
 			Label_Team_Contact_Email = new JLabel();
 			Label_Team_Contact_Email.setText("Email:");
 			GridBagConstraints gridBagConstraints16 = new GridBagConstraints();
 			gridBagConstraints16.gridx = 1;
 			gridBagConstraints16.gridy = 9;
+			
 			Label_Team_Contact_Person = new JLabel();
 			Label_Team_Contact_Person.setText("Contact Person:");
 			GridBagConstraints gridBagConstraints15 = new GridBagConstraints();
@@ -218,36 +271,44 @@ public class Frame_Main extends JFrame {
 			GridBagConstraints gridBagConstraints13 = new GridBagConstraints();
 			gridBagConstraints13.gridx = 0;
 			gridBagConstraints13.gridy = 8;
+			
 			Label_Team_Contact_Info = new JLabel();
 			Label_Team_Contact_Info.setText("Contact Information:");
 			GridBagConstraints gridBagConstraints12 = new GridBagConstraints();
 			gridBagConstraints12.gridx = 1;
 			gridBagConstraints12.gridy = 7;
+			
 			Label_Team_Division = new JLabel();
 			Label_Team_Division.setText("Team Division");
 			GridBagConstraints gridBagConstraints10 = new GridBagConstraints();
 			gridBagConstraints10.gridx = 1;
 			gridBagConstraints10.gridy = 6;
+			
 			Label_Team_Name = new JLabel();
 			Label_Team_Name.setText("Team Name");
 			GridBagConstraints gridBagConstraints9 = new GridBagConstraints();
 			gridBagConstraints9.gridx = 1;
 			gridBagConstraints9.gridy = 5;
+			
 			Label_Team_TeamID = new JLabel();
 			Label_Team_TeamID.setText("Team ID");
 			GridBagConstraints gridBagConstraints8 = new GridBagConstraints();
 			gridBagConstraints8.gridx = 0;
 			gridBagConstraints8.gridy = 4;
+			
 			Label_Team_Details = new JLabel();
 			Label_Team_Details.setText("Details:");
 			GridBagConstraints gridBagConstraints7 = new GridBagConstraints();
 			gridBagConstraints7.gridx = 0;
+			gridBagConstraints7.anchor = GridBagConstraints.CENTER;
 			gridBagConstraints7.gridy = 2;
+			
 			Label_Team_All_Divisions = new JLabel();
 			Label_Team_All_Divisions.setText("Division");
 			GridBagConstraints gridBagConstraints6 = new GridBagConstraints();
 			gridBagConstraints6.gridx = 0;
 			gridBagConstraints6.gridy = 3;
+			
 			Label_Team_TeamName = new JLabel();
 			Label_Team_TeamName.setText("Team Name");
 			GridBagConstraints gridBagConstraints5 = new GridBagConstraints();
@@ -256,6 +317,7 @@ public class Frame_Main extends JFrame {
 			GridBagConstraints gridBagConstraints4 = new GridBagConstraints();
 			gridBagConstraints4.gridy = 2;
 			gridBagConstraints4.gridx = 2;
+			
 			Panel_Team = new JPanel();
 			Panel_Team.setLayout(new GridBagLayout());
 			Panel_Team.setName("Teams");
@@ -278,6 +340,13 @@ public class Frame_Main extends JFrame {
 			Panel_Team.add(getButton_Team_Edit_Email(), gridBagConstraints21);
 			Panel_Team.add(getButton_Team_Edit_HomeNumber(), gridBagConstraints22);
 			Panel_Team.add(getButton_Team_Edit_MobileNumber(), gridBagConstraints23);
+			Panel_Team.add(getComboBox_Teams_ContactPerson(), gridBagConstraints41);
+			Panel_Team.add(getTextArea_Teams_Email(), gridBagConstraints42);
+			Panel_Team.add(getTextArea_Teams_HomeNumber(), gridBagConstraints43);
+			Panel_Team.add(getTextArea_Teams_MobileNumber(), gridBagConstraints44);
+			Panel_Team.add(getTextArea_Teams_Division(), gridBagConstraints45);
+			Panel_Team.add(getTextArea_Teams_TeamName(), gridBagConstraints46);
+			Panel_Team.add(getTextArea_Teams_TeamID(), gridBagConstraints47);
 			
 		}
 		return Panel_Team;
@@ -405,9 +474,11 @@ public class Frame_Main extends JFrame {
 			gridBagConstraints40.gridx = 1;
 			GridBagConstraints gridBagConstraints39 = new GridBagConstraints();
 			gridBagConstraints39.gridx = 4;
+			gridBagConstraints39.anchor = GridBagConstraints.EAST;
 			gridBagConstraints39.gridy = 0;
 			GridBagConstraints gridBagConstraints38 = new GridBagConstraints();
 			gridBagConstraints38.gridx = 1;
+			gridBagConstraints38.anchor = GridBagConstraints.WEST;
 			gridBagConstraints38.gridy = 0;
 			Panel_Checklist = new JPanel();
 			Panel_Checklist.setLayout(new GridBagLayout());
@@ -667,6 +738,7 @@ public class Frame_Main extends JFrame {
 	private JSplitPane getJSplitPane_Checklists() {
 		if (jSplitPane_Checklists == null) {
 			jSplitPane_Checklists = new JSplitPane();
+			jSplitPane_Checklists.setContinuousLayout(true);
 			jSplitPane_Checklists.setLeftComponent(getJEditorPane_Rules());
 			jSplitPane_Checklists.setRightComponent(getJEditorPane_Checklist());
 		}
@@ -698,6 +770,90 @@ public class Frame_Main extends JFrame {
 	}
 
 	/**
+	 * This method initializes ComboBox_Teams_ContactPerson	
+	 * 	
+	 * @return javax.swing.JComboBox	
+	 */
+	private JComboBox getComboBox_Teams_ContactPerson() {
+		if (ComboBox_Teams_ContactPerson == null) {
+			ComboBox_Teams_ContactPerson = new JComboBox();
+		}
+		return ComboBox_Teams_ContactPerson;
+	}
+
+	/**
+	 * This method initializes TextArea_Teams_Email	
+	 * 	
+	 * @return javax.swing.JTextArea	
+	 */
+	private JTextArea getTextArea_Teams_Email() {
+		if (TextArea_Teams_Email == null) {
+			TextArea_Teams_Email = new JTextArea();
+		}
+		return TextArea_Teams_Email;
+	}
+
+	/**
+	 * This method initializes TextArea_Teams_HomeNumber	
+	 * 	
+	 * @return javax.swing.JTextArea	
+	 */
+	private JTextArea getTextArea_Teams_HomeNumber() {
+		if (TextArea_Teams_HomeNumber == null) {
+			TextArea_Teams_HomeNumber = new JTextArea();
+		}
+		return TextArea_Teams_HomeNumber;
+	}
+
+	/**
+	 * This method initializes TextArea_Teams_MobileNumber	
+	 * 	
+	 * @return javax.swing.JTextArea	
+	 */
+	private JTextArea getTextArea_Teams_MobileNumber() {
+		if (TextArea_Teams_MobileNumber == null) {
+			TextArea_Teams_MobileNumber = new JTextArea();
+		}
+		return TextArea_Teams_MobileNumber;
+	}
+
+	/**
+	 * This method initializes TextArea_Teams_Division	
+	 * 	
+	 * @return javax.swing.JTextArea	
+	 */
+	private JTextArea getTextArea_Teams_Division() {
+		if (TextArea_Teams_Division == null) {
+			TextArea_Teams_Division = new JTextArea();
+		}
+		return TextArea_Teams_Division;
+	}
+
+	/**
+	 * This method initializes TextArea_Teams_TeamName	
+	 * 	
+	 * @return javax.swing.JTextArea	
+	 */
+	private JTextArea getTextArea_Teams_TeamName() {
+		if (TextArea_Teams_TeamName == null) {
+			TextArea_Teams_TeamName = new JTextArea();
+		}
+		return TextArea_Teams_TeamName;
+	}
+
+	/**
+	 * This method initializes TextArea_Teams_TeamID	
+	 * 	
+	 * @return javax.swing.JTextArea	
+	 */
+	private JTextArea getTextArea_Teams_TeamID() {
+		if (TextArea_Teams_TeamID == null) {
+			TextArea_Teams_TeamID = new JTextArea();
+		}
+		return TextArea_Teams_TeamID;
+	}
+
+	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -725,7 +881,7 @@ public class Frame_Main extends JFrame {
 	 * @return void
 	 */
 	private void initialize() {
-		this.setSize(607, 357);
+		this.setSize(607, 672);
 		this.setContentPane(getJContentPane());
 		this.setTitle("JFrame");
 	}
