@@ -32,7 +32,9 @@ public class Frame_Main extends JFrame {
 	ArrayList<String[]>senior = new ArrayList<String[]>(5);
 	
 	//ArrayList<String[]>[] divisions = new ArrayList<String[]>[5];
-	Object[] divisions = { u16,beginner,intermediate,advanced,senior };
+	ArrayList<ArrayList<String[]>> divisions;
+	//divisions.add
+	//Object[] divisions = { u16,beginner,intermediate,advanced,senior };
 	
 /*	String[][] advanced = { 
 			{"Ultimate Black","Advanced","2","Lisa Ellis","lisae745@hotmail.com","(09) 234 56 78","0212985630","Score"},
