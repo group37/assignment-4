@@ -1001,14 +1001,9 @@ public class Frame_Main extends JFrame {
 	 */
 	public Frame_Main() {
 		super();
-		//beginner.add(new String[] {"Ultimate Black","Advanced","2","Lisa Ellis","lisae745@hotmail.com","(09) 234 56 78","0212985630","Score"});
-		//beginner.add(new String[] {"WeGotThis","Advanced","3","John Ford","JFord12@msn.com","(09) 123 45 56","0273098126","Score"});
+		advanced.add(new String[] {"Ultimate Black","Advanced","2","Lisa Ellis","lisae745@hotmail.com","(09) 234 56 78","0212985630","Score"});
+		advanced.add(new String[] {"WeGotThis","Advanced","3","John Ford","JFord12@msn.com","(09) 123 45 56","0273098126","Score"});
 		
-		//u16 = new ArrayList<String[]>(5);
-		beginner = new ArrayList<String[]>(5);
-		//intermediate = new ArrayList<String[]>(5);
-		//advanced = new ArrayList<String[]>(5);
-		//senior = new ArrayList<String[]>(5);
 		
 		beginner.add(new String[] {"InMotion", "Beginner", "14", "Jonah Lomu", "JLomu@hotmail.com", "(09) 537 53 53", "0214444444", "Score"});
 		beginner.add(new String[] {"Team Ben", " Beginner",  "15", "David Tua", "abc@hotmail.com", "(09) 987 65 54", "0211234567", "Score"});
