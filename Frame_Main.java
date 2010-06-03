@@ -550,7 +550,7 @@ public class Frame_Main extends JFrame {
         if (ComboBox_Team_Division == null) {
             
             //ComboBox_Team_Division = new JComboBox(DivisionStrings);
-        	ComboBox_Team_Division = new JComboBox(divisions);
+        	ComboBox_Team_Division = new JComboBox(beginner.toArray());
         	
             ComboBox_Team_Division.addItemListener(new ItemListener(){
             	public void itemStateChanged(ItemEvent e) {
